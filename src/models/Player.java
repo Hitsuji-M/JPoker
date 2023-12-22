@@ -40,7 +40,7 @@ public class Player {
 	public Card[] removeCardsFromHand(final int[] indexes) {
 		Card[] cards = new Card[indexes.length];
 		for (int i = 0; i < indexes.length; i++) {
-			cards[i] = this.hand.removeCard(i);
+			cards[i] = this.hand.removeCard(indexes[i]);
 		}
 		return cards;
 	}

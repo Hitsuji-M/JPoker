@@ -34,4 +34,18 @@ public class Card implements Comparable<Card> {
 	public int compareTo(Card card) {
 		return this.value < card.value ? 1 : this.value == card.value ? 0 : -1;
 	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) {
+			return true;
+		}
+		
+		if (!(this.getClass() == o.getClass())) {
+			return false;
+		}
+		
+		Card objCard = (Card)o;
+		return this.value == objCard.value;
+	}
 }
