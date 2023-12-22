@@ -5,7 +5,6 @@ import java.util.Scanner;
 import models.Deck;
 import models.Player;
 import utils.GameState;
-import models.Card;
 
 public class GameEngine {
 	private GameState state = GameState.PENDING;
@@ -78,9 +77,6 @@ public class GameEngine {
 	}
 
 	public void startApplication() {
-		String input1, input2;
-		int nb1, nb2;
-		
 		this.fillPlayerCards();
 
 		while (this.state == GameState.PENDING) {

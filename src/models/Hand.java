@@ -1,6 +1,9 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.Collections;
+
+import utils.CombinationsValues;
 
 public class Hand {
 	private ArrayList<Card> cards;
@@ -19,6 +22,11 @@ public class Hand {
 	
 	public Card removeCard(final int index) {
 		return this.cards.remove(index);
+	}
+	
+	public int getScore() {
+		Collections.sort(this.cards);
+		return CombinationsValues.HIGH_CARD;
 	}
 
 	@Override
