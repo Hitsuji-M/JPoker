@@ -44,6 +44,20 @@ public class Deck {
 		Collections.shuffle(this.cards);
 	}
 	
+	public void addCard(final Card card) {
+		this.cards.add(card);
+	}
+
+	public void addCards(final Card[] newCards) {
+		for (Card card : newCards) {
+			this.cards.add(card);
+		}
+	}
+	
+	public Card drawCard() {
+		return this.cards.remove(0);
+	}
+
 	@Override
 	public String toString() {
 		return this.cards.toString();
